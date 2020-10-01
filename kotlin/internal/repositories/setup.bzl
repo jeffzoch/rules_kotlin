@@ -23,7 +23,7 @@ def kt_configure():
         name = "kotlin_rules_maven",
         fetch_sources = True,
         artifacts = [
-            "org.jetbrains.kotlinx:atomicfu-js:0.14.0",
+            "org.jetbrains.kotlinx:atomicfu-js:0.14.4",
             "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9",
             "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.3.9",
             "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.9",
@@ -31,9 +31,9 @@ def kt_configure():
             "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0", 
             "com.google.code.findbugs:jsr305:3.0.2",
             "junit:junit:4.13-beta-3",
-            "com.google.protobuf:protobuf-java:3.6.0",
-            "com.google.protobuf:protobuf-java-util:3.6.0",
-            "com.google.guava:guava:27.1-jre",
+            "com.google.protobuf:protobuf-java:3.11.0",
+            "com.google.protobuf:protobuf-java-util:3.11.0",
+            "com.google.guava:guava:28.1-jre",
             "com.google.truth:truth:0.45",
             "com.google.auto.service:auto-service:1.0-rc5",
             "com.google.auto.service:auto-service-annotations:1.0-rc5",
@@ -47,12 +47,13 @@ def kt_configure():
             "org.pantsbuild:jarjar:1.7.2",
         ],
         repositories = [
-             "https://nexus-proxy-prd.soma.salesforce.com/nexus/content/groups/public",
             "https://maven-central.storage.googleapis.com/repos/central/data/",
             "https://jcenter.bintray.com/",
             "https://repo1.maven.org/maven2",
+             "https://nexus-proxy-prd.soma.salesforce.com/nexus/content/groups/public",
 
         ],
+        maven_install_json = "@io_bazel_rules_kotlin//:kotlin_rules_maven_install.json",
     )
 
     rules_proto_dependencies()

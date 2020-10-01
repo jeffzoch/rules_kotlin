@@ -161,7 +161,6 @@ class KotlinWorkerTest {
       assertThat(
         worker.run(
           args(compilationTaskInfo) {
-            flag(KotlinBuilderFlags.PASSTHROUGH_FLAGS, "-Xinline-classes")
             flag(KotlinBuilderFlags.ABI_JAR, abiJar)
             source(one)
             source(zero)
