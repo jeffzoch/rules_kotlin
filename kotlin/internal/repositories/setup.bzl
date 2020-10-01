@@ -47,9 +47,11 @@ def kt_configure():
             "org.pantsbuild:jarjar:1.7.2",
         ],
         repositories = [
+             "https://nexus-proxy-prd.soma.salesforce.com/nexus/content/groups/public",
             "https://maven-central.storage.googleapis.com/repos/central/data/",
             "https://jcenter.bintray.com/",
             "https://repo1.maven.org/maven2",
+
         ],
     )
 
