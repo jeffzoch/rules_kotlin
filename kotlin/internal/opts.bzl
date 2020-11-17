@@ -49,6 +49,13 @@ _KOPTS = {
         ),
         type = attr.bool,
     ),
+    "x_inline_classes": struct(
+        args = dict(
+            default = False,
+            doc = "Enable experimental inline classes",
+        ),
+        type = attr.bool,
+    ),
 }
 
 KotlincOptions = provider(

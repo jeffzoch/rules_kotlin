@@ -205,6 +205,8 @@ def _kotlinc_options_provider_to_flags(opts):
         flags.append("-Xallow-jvm-ir-dependencies")
     if opts.x_skip_prerelease_check:
         flags.append("-Xskip-prerelease-check")
+    if opts.x_inline_classes:
+        flags.append("-Xinline-classes")
     return flags
 
 def _javac_options_provider_to_flags(opts):
