@@ -59,7 +59,7 @@ _KOPTS = {
     "x_allow_result_return_type": struct(
         args = dict(
             default = False,
-            doc = "Enable kotlin.Result as a return type",
+            doc = "Enable result in return types",
         ),
         type = attr.bool,
     ),
